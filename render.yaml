@@ -3,9 +3,14 @@ services:
     name: facebook-automation-suite
     env: node
     plan: free
+    autoDeploy: true
+    region: oregon  # You can remove or update the region if needed
     buildCommand: npm install
     startCommand: npm start
-    autoDeploy: true
+    # Environment Variables defined here
     envVars:
       - key: NODE_ENV
         value: production
+      # Uncomment and add additional env variables here if your app needs them
+      # - key: SOME_VARIABLE
+      #   value: your_value_here
